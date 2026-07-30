@@ -1,25 +1,15 @@
 #include <stdio.h>
 
-int main(){
-    int numberArray[] = {1,2,3,4};
-    printf("index 2: %d\n",numberArray[2]);
-    printf("Size of: %zu\n",sizeof(numberArray));
-
-    int count = sizeof(numberArray) / sizeof(numberArray[0]);
-    printf("Count = %d\n", count);
-
-    int numbers[3] = {1,2,3,4}; //excess elements in array initializer max 3 item 
-    // int numbers[3] = {1,2}; //ok
-    int numbers[3] = {1,2,3};
-    printf("index 0: %d\n",numbers[0]);
+int main()
+{
 
     /**
      * 2D array
      * 2 rows
      * 3 columns
      **/
-    int two_dimensional[2][3] = {{1, 2}, {4, 5, 6}};
-    printf("%d\n", two_dimensional[1][1]);
+    int numbers[2][3] = {{1, 2}, {4, 5, 6}};
+    printf("%d\n", numbers[1][1]);
 
     int matrix[2][3] = {{1, 4, 2}, {3, 6, 8}};
     matrix[0][0] = 9;
