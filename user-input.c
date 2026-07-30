@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//scanf: Use the scanf() function to get a single word as input
+/**
 int main()
 {
   //  Create an int and a char variable
@@ -43,10 +45,32 @@ int main()
 
   printf("Type a number AND a name and press enter: \n");
 
-  scanf("%d %19s", &myNum, name);
+  scanf("%d %19s", &myNum, name); //%19s prevents buffer overflow by leaving room for the terminating '\0'.
 
   printf("Your number is: %d\n", myNum);
   printf("Your name is: %s\n", name);
 
+  return 0;
+}
+**/
+
+//fgets: Use fgets() for multiple words.
+int main() {
+  // Create a string
+  char name[30];
+
+  // Ask the user to input some text (full name)
+  printf("Type your full name and press enter: \n");
+
+  /**
+   * name → where to store the input
+   * sizeof(name) → maximum number of characters to read
+   * stdin → read from the keyboard
+   */
+  fgets(name, sizeof(name), stdin);
+
+  // Output the text
+  printf("Hello %s", name);
+  
   return 0;
 }
